@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    // SDK SET TO 28, BECAUSE IN HIGHER VERSIONS THERE ARE PROBLEMS WITH LOADING INSTALLED APPS
+    compileSdkVersion 35
+    defaultConfig {
+        applicationId "sk.mizik.stoiclauncher"
+        minSdkVersion 29
+        targetSdkVersion 35
+        versionCode 2
+        versionName "2.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'sk.mizik.stoiclauncher'
+}
+
+dependencies {
+    // OLD VERSIONS BECAUSE NEWER VERSIONS DON'T SUPPORT COMPILE SDK VERSION 28 (ONLY HIGHER)
+    implementation "androidx.core:core:1.16.0"
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- ROWS INPUT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grid_rows"
+        android:textSize="18sp"
+        android:labelFor="@id/rowsField"
+        android:paddingBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/rowsField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+
+    <!-- COLUMNS INPUT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grid_columns"
+        android:textSize="18sp"
+        android:labelFor="@id/columnsField"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/columnsField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+
+    <!-- EXPORT AND IMPORT -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/exportButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/export_settings" />
+
+        <Button
+            android:id="@+id/importButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/import_settings"/>
+    </LinearLayout>
+
+    <!-- SAVE AND CANCEL -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_gravity="bottom"
+        android:paddingTop="60dp">
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

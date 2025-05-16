@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <!-- HOME GRID -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/homeGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:stretchMode="columnWidth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+    <!-- ALL APP GRID -->
+    <FrameLayout
+        android:id="@+id/bottomSheet"
+        style="@style/Widget.Design.BottomSheet.Modal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        android:background="@android:color/transparent"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- TRANSPARENT PROTRUDING SWIPE-UP HANDLE -->
+            <LinearLayout
+                android:id="@+id/bottomSheetDragHandle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal" />
+
+            <!-- GRID ITSELF -->
+            <GridView
+                android:id="@+id/appGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:focusableInTouchMode="false"
+                android:background="@android:color/black"
+                android:paddingBottom="60dp"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

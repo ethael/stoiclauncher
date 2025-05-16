@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">StoicLauncher</string>
+    <string name="app_icon">Icon</string>
+    <string name="remove">Remove</string>
+    <string name="info">Info</string>
+    <string name="move">Move</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="launcher_settings">Launcher settings</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="import_settings">Import</string>
+    <string name="export_settings">Export</string>
+    <string name="grid_columns">Grid columns</string>
+    <string name="grid_rows">Grid rows</string>
+</resources>
